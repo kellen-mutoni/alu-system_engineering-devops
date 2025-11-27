@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Configure web-01 to forward its redirects port 8080 to port 80/tcp
+modprobe ip_tables
+iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 8080 -j REDIRECT --to-port 80
