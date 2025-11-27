@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+kill -9 $(lsof -t -i:80)
+sed -i 's/listen 80 default_server;/listen 80;/' /etc/nginx/sites-available/default
+service nginx restart
