@@ -1,4 +1,4 @@
-*nat
-:PREROUTING ACCEPT [0:0]
--A PREROUTING -p tcp --dport 8080 -j REDIRECT --to-port 80
-COMMIT
+#!/usr/bin/env bash
+# Configure port forwarding 8080 to 80
+modprobe ip_tables
+iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 8080 -j REDIRECT --to-port 80
