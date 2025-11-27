@@ -1,7 +1,3 @@
 #!/usr/bin/env bash
 # Fixes Docker container port mapping issue
-<<<<<<< HEAD
 sudo docker run -d -p 80:5000 holberton/2048-web-01
-=======
-docker run -d -p 80:5000 holberton/2048-web-01
->>>>>>> fbb820fb67e84858dfd7667ba4dc17e9593a2eda
